@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HRMS UI-Visible User Manual</title>
+  <style>
+    :root { --bg:#f2f4f8; --ink:#182033; --muted:#5b6580; --brand:#2f61e9; --brand-2:#16a2a5; --card:#fff; --line:#d9deea; }
+    *{box-sizing:border-box;} body{margin:0;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(1200px 600px at 10% -20%,#d9e8ff 0%,transparent 60%),radial-gradient(1200px 600px at 90% -20%,#dbfff4 0%,transparent 55%),var(--bg);} 
+    .hero{padding:44px 22px 26px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,rgba(47,97,233,.12),rgba(22,162,165,.1));} 
+    .hero h1{margin:0 0 8px;font-size:clamp(26px,4vw,40px);} .hero p{margin:0;color:var(--muted);font-size:15px;} .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;} 
+    .chip{border:1px solid var(--line);background:#fff;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);} 
+    .wrap{display:grid;grid-template-columns:280px 1fr;gap:18px;padding:18px;} .toc{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px;} 
+    .toc h3{margin:4px 8px 10px;font-size:14px;text-transform:uppercase;color:var(--muted);letter-spacing:.5px;} .toc a{display:block;text-decoration:none;color:var(--ink);font-size:13px;padding:8px 10px;border-radius:8px;line-height:1.35;} .toc a:hover{background:#eef3ff;} 
+    .grid{display:grid;gap:16px;} .card{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px;box-shadow:0 8px 22px rgba(18,31,65,.06);} 
+    .meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;} .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:0 0 auto;font-size:13px;} 
+    h2{margin:0;font-size:20px;} .meta p{margin:2px 0 0;color:var(--muted);font-size:13px;} code{background:#eef2fb;border:1px solid #d8e0f2;border-radius:6px;padding:1px 6px;} 
+    img{width:100%;border-radius:10px;border:1px solid var(--line);margin-top:6px;background:#f8faff;} .purpose{color:#27314a;margin:10px 0 6px;} ul{margin:0;padding-left:18px;color:var(--muted);} li{margin:4px 0;} 
+    @media (max-width:980px){.wrap{grid-template-columns:1fr;}.toc{position:relative;max-height:280px;}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>HRMS First-Visitor Manual</h1>
+    <p>UI-visible guide generated from live navigation at <strong>https://hrms.srj.group</strong> on <strong>February 23, 2026</strong>.</p>
+    <div class="chips"><span class="chip">Frontend-only manual</span><span class="chip">No backend dependency</span><span class="chip">No role/org rule in guide logic</span><span class="chip">41 captured screens</span></div>
+  </header>
+  <main class="wrap">
+    <aside class="toc"><h3>Screen Index</h3>
+<a href="#s1">1. Login</a><a href="#s2">2. Dashboard (Main)</a><a href="#s3">3. Dashboard (Self)</a><a href="#s4">4. User Management</a><a href="#s5">5. Role Management</a><a href="#s6">6. Attendance Management (Default)</a><a href="#s7">7. Attendance Details</a><a href="#s8">8. Attendance List</a><a href="#s9">9. Attendance Summary</a><a href="#s10">10. Leaves (Default)</a><a href="#s11">11. Leaves</a><a href="#s12">12. Unpaid Leaves</a><a href="#s13">13. Leave Types</a><a href="#s14">14. Remaining Leaves</a><a href="#s15">15. Employee Profile</a><a href="#s16">16. Holidays</a><a href="#s17">17. Company Policies</a><a href="#s18">18. Expenses (Claims)</a><a href="#s19">19. Expense Categories</a><a href="#s20">20. Expense Claims</a><a href="#s21">21. Expense Reimbursements</a><a href="#s22">22. Asset Management (Default)</a><a href="#s23">23. Asset Types</a><a href="#s24">24. My Assets</a><a href="#s25">25. Assets</a><a href="#s26">26. Shifts (Legacy Route)</a><a href="#s27">27. Human Resources (Default)</a><a href="#s28">28. HR Shifts</a><a href="#s29">29. Designations</a><a href="#s30">30. Departments</a><a href="#s31">31. Staff</a><a href="#s32">32. Salary Templates</a><a href="#s33">33. Salary Groups</a><a href="#s34">34. Agreements</a><a href="#s35">35. Locations</a><a href="#s36">36. Customer Payment</a><a href="#s37">37. Travel Ticket Management (Default)</a><a href="#s38">38. Travel Request Details</a><a href="#s39">39. Approval Request Details</a><a href="#s40">40. Notifications</a><a href="#s41">41. Organizations</a>
+    </aside>
+    <section class="grid">
+
+<section class="card" id="s1">
+  <div class="meta">
+    <span class="num">1</span>
+    <div>
+      <h2>Login</h2>
+      <p><code>/login</code></p>
+    </div>
+  </div>
+  <img src="screenshots/01-login.png" alt="Login screen" loading="lazy" />
+  <p class="purpose">Sign in to HRMS and access your workspace.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s2">
+  <div class="meta">
+    <span class="num">2</span>
+    <div>
+      <h2>Dashboard (Main)</h2>
+      <p><code>/dashboard</code></p>
+    </div>
+  </div>
+  <img src="screenshots/03-dashboard.png" alt="Dashboard (Main) screen" loading="lazy" />
+  <p class="purpose">See company-level metrics and quick operational summaries.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s3">
+  <div class="meta">
+    <span class="num">3</span>
+    <div>
+      <h2>Dashboard (Self)</h2>
+      <p><code>/dashboard/self</code></p>
+    </div>
+  </div>
+  <img src="screenshots/04-dashboard-self.png" alt="Dashboard (Self) screen" loading="lazy" />
+  <p class="purpose">Review your own attendance, leave, and personal stats.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s4">
+  <div class="meta">
+    <span class="num">4</span>
+    <div>
+      <h2>User Management</h2>
+      <p><code>/user-management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/05-user-management.png" alt="User Management screen" loading="lazy" />
+  <p class="purpose">Create, search, update, and manage employee records.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s5">
+  <div class="meta">
+    <span class="num">5</span>
+    <div>
+      <h2>Role Management</h2>
+      <p><code>/role-management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/06-role-management.png" alt="Role Management screen" loading="lazy" />
+  <p class="purpose">Set up and maintain roles and role-based access templates.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s6">
+  <div class="meta">
+    <span class="num">6</span>
+    <div>
+      <h2>Attendance Management (Default)</h2>
+      <p><code>/attendance-management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/07-attendance-management.png" alt="Attendance Management (Default) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for attendance management (default).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s7">
+  <div class="meta">
+    <span class="num">7</span>
+    <div>
+      <h2>Attendance Details</h2>
+      <p><code>/attendance-management/details</code></p>
+    </div>
+  </div>
+  <img src="screenshots/08-attendance-management-details.png" alt="Attendance Details screen" loading="lazy" />
+  <p class="purpose">Inspect day-level attendance, clock-in/clock-out, and timeline views.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s8">
+  <div class="meta">
+    <span class="num">8</span>
+    <div>
+      <h2>Attendance List</h2>
+      <p><code>/attendance-management/list</code></p>
+    </div>
+  </div>
+  <img src="screenshots/09-attendance-management-list.png" alt="Attendance List screen" loading="lazy" />
+  <p class="purpose">Browse attendance entries with filters and export options.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s9">
+  <div class="meta">
+    <span class="num">9</span>
+    <div>
+      <h2>Attendance Summary</h2>
+      <p><code>/attendance-management/summary</code></p>
+    </div>
+  </div>
+  <img src="screenshots/10-attendance-management-summary.png" alt="Attendance Summary screen" loading="lazy" />
+  <p class="purpose">Track aggregate attendance totals by date/user.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s10">
+  <div class="meta">
+    <span class="num">10</span>
+    <div>
+      <h2>Leaves (Default)</h2>
+      <p><code>/leave-management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/11-leave-management.png" alt="Leaves (Default) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for leaves (default).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s11">
+  <div class="meta">
+    <span class="num">11</span>
+    <div>
+      <h2>Leaves</h2>
+      <p><code>/leave-management/leaves</code></p>
+    </div>
+  </div>
+  <img src="screenshots/12-leave-management-leaves.png" alt="Leaves screen" loading="lazy" />
+  <p class="purpose">Apply, approve, review, and filter leave records.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s12">
+  <div class="meta">
+    <span class="num">12</span>
+    <div>
+      <h2>Unpaid Leaves</h2>
+      <p><code>/leave-management/unpaid-leaves</code></p>
+    </div>
+  </div>
+  <img src="screenshots/13-leave-management-unpaid-leaves.png" alt="Unpaid Leaves screen" loading="lazy" />
+  <p class="purpose">Monitor unpaid leave by month and employee.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s13">
+  <div class="meta">
+    <span class="num">13</span>
+    <div>
+      <h2>Leave Types</h2>
+      <p><code>/leave-management/leave_types</code></p>
+    </div>
+  </div>
+  <img src="screenshots/14-leave-management-leave-types.png" alt="Leave Types screen" loading="lazy" />
+  <p class="purpose">Configure leave categories and limits.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s14">
+  <div class="meta">
+    <span class="num">14</span>
+    <div>
+      <h2>Remaining Leaves</h2>
+      <p><code>/leave-management/remaining-leaves</code></p>
+    </div>
+  </div>
+  <img src="screenshots/15-leave-management-remaining-leaves.png" alt="Remaining Leaves screen" loading="lazy" />
+  <p class="purpose">Check balance remaining for employees.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s15">
+  <div class="meta">
+    <span class="num">15</span>
+    <div>
+      <h2>Employee Profile</h2>
+      <p><code>/profile</code></p>
+    </div>
+  </div>
+  <img src="screenshots/16-profile.png" alt="Employee Profile screen" loading="lazy" />
+  <p class="purpose">View profile details and personal information.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s16">
+  <div class="meta">
+    <span class="num">16</span>
+    <div>
+      <h2>Holidays</h2>
+      <p><code>/holidays</code></p>
+    </div>
+  </div>
+  <img src="screenshots/17-holidays.png" alt="Holidays screen" loading="lazy" />
+  <p class="purpose">Manage and review company holiday calendar.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s17">
+  <div class="meta">
+    <span class="num">17</span>
+    <div>
+      <h2>Company Policies</h2>
+      <p><code>/company-policies</code></p>
+    </div>
+  </div>
+  <img src="screenshots/18-company-policies.png" alt="Company Policies screen" loading="lazy" />
+  <p class="purpose">Publish and review policy documents.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s18">
+  <div class="meta">
+    <span class="num">18</span>
+    <div>
+      <h2>Expenses (Claims)</h2>
+      <p><code>/expenses</code></p>
+    </div>
+  </div>
+  <img src="screenshots/19-expenses.png" alt="Expenses (Claims) screen" loading="lazy" />
+  <p class="purpose">Submit and track expense claims.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s19">
+  <div class="meta">
+    <span class="num">19</span>
+    <div>
+      <h2>Expense Categories</h2>
+      <p><code>/expenses/categories</code></p>
+    </div>
+  </div>
+  <img src="screenshots/20-expenses-categories.png" alt="Expense Categories screen" loading="lazy" />
+  <p class="purpose">Configure expense category definitions.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s20">
+  <div class="meta">
+    <span class="num">20</span>
+    <div>
+      <h2>Expense Claims</h2>
+      <p><code>/expenses/claims</code></p>
+    </div>
+  </div>
+  <img src="screenshots/21-expenses-claims.png" alt="Expense Claims screen" loading="lazy" />
+  <p class="purpose">Review claims with status and action controls.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s21">
+  <div class="meta">
+    <span class="num">21</span>
+    <div>
+      <h2>Expense Reimbursements</h2>
+      <p><code>/expenses/reimbursements</code></p>
+    </div>
+  </div>
+  <img src="screenshots/22-expenses-reimbursements.png" alt="Expense Reimbursements screen" loading="lazy" />
+  <p class="purpose">Track reimbursement totals, methods, and processing details.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s22">
+  <div class="meta">
+    <span class="num">22</span>
+    <div>
+      <h2>Asset Management (Default)</h2>
+      <p><code>/asset-management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/23-asset-management.png" alt="Asset Management (Default) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for asset management (default).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s23">
+  <div class="meta">
+    <span class="num">23</span>
+    <div>
+      <h2>Asset Types</h2>
+      <p><code>/asset-management/asset-types</code></p>
+    </div>
+  </div>
+  <img src="screenshots/24-asset-management-asset-types.png" alt="Asset Types screen" loading="lazy" />
+  <p class="purpose">Define asset categories and metadata.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s24">
+  <div class="meta">
+    <span class="num">24</span>
+    <div>
+      <h2>My Assets</h2>
+      <p><code>/asset-management/self/assets</code></p>
+    </div>
+  </div>
+  <img src="screenshots/25-asset-management-self-assets.png" alt="My Assets screen" loading="lazy" />
+  <p class="purpose">Review assets assigned to your profile.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s25">
+  <div class="meta">
+    <span class="num">25</span>
+    <div>
+      <h2>Assets</h2>
+      <p><code>/asset-management/assets</code></p>
+    </div>
+  </div>
+  <img src="screenshots/26-asset-management-assets.png" alt="Assets screen" loading="lazy" />
+  <p class="purpose">Manage issued company assets and assignments.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s26">
+  <div class="meta">
+    <span class="num">26</span>
+    <div>
+      <h2>Shifts (Legacy Route)</h2>
+      <p><code>/shifts</code></p>
+    </div>
+  </div>
+  <img src="screenshots/27-shifts.png" alt="Shifts (Legacy Route) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for shifts (legacy route).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s27">
+  <div class="meta">
+    <span class="num">27</span>
+    <div>
+      <h2>Human Resources (Default)</h2>
+      <p><code>/human-resources</code></p>
+    </div>
+  </div>
+  <img src="screenshots/28-human-resources.png" alt="Human Resources (Default) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for human resources (default).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s28">
+  <div class="meta">
+    <span class="num">28</span>
+    <div>
+      <h2>HR Shifts</h2>
+      <p><code>/human-resources/shifts</code></p>
+    </div>
+  </div>
+  <img src="screenshots/29-human-resources-shifts.png" alt="HR Shifts screen" loading="lazy" />
+  <p class="purpose">Configure and maintain shift schedules.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s29">
+  <div class="meta">
+    <span class="num">29</span>
+    <div>
+      <h2>Designations</h2>
+      <p><code>/human-resources/designations</code></p>
+    </div>
+  </div>
+  <img src="screenshots/30-human-resources-designations.png" alt="Designations screen" loading="lazy" />
+  <p class="purpose">Maintain role/designation master list.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s30">
+  <div class="meta">
+    <span class="num">30</span>
+    <div>
+      <h2>Departments</h2>
+      <p><code>/human-resources/departments</code></p>
+    </div>
+  </div>
+  <img src="screenshots/31-human-resources-departments.png" alt="Departments screen" loading="lazy" />
+  <p class="purpose">Create and organize department structure.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s31">
+  <div class="meta">
+    <span class="num">31</span>
+    <div>
+      <h2>Staff</h2>
+      <p><code>/human-resources/staffs</code></p>
+    </div>
+  </div>
+  <img src="screenshots/32-human-resources-staffs.png" alt="Staff screen" loading="lazy" />
+  <p class="purpose">Manage staff directory and HR status.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s32">
+  <div class="meta">
+    <span class="num">32</span>
+    <div>
+      <h2>Salary Templates</h2>
+      <p><code>/human-resources/salary-templates</code></p>
+    </div>
+  </div>
+  <img src="screenshots/33-human-resources-salary-templates.png" alt="Salary Templates screen" loading="lazy" />
+  <p class="purpose">Define salary template structures.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s33">
+  <div class="meta">
+    <span class="num">33</span>
+    <div>
+      <h2>Salary Groups</h2>
+      <p><code>/human-resources/salary-groups</code></p>
+    </div>
+  </div>
+  <img src="screenshots/34-human-resources-salary-groups.png" alt="Salary Groups screen" loading="lazy" />
+  <p class="purpose">Group templates into compensation packages.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s34">
+  <div class="meta">
+    <span class="num">34</span>
+    <div>
+      <h2>Agreements</h2>
+      <p><code>/human-resources/agreements</code></p>
+    </div>
+  </div>
+  <img src="screenshots/35-human-resources-agreements.png" alt="Agreements screen" loading="lazy" />
+  <p class="purpose">Create and manage employee agreements/templates.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s35">
+  <div class="meta">
+    <span class="num">35</span>
+    <div>
+      <h2>Locations</h2>
+      <p><code>/locations</code></p>
+    </div>
+  </div>
+  <img src="screenshots/36-locations.png" alt="Locations screen" loading="lazy" />
+  <p class="purpose">Configure work locations and related metadata.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s36">
+  <div class="meta">
+    <span class="num">36</span>
+    <div>
+      <h2>Customer Payment</h2>
+      <p><code>/customer_payment</code></p>
+    </div>
+  </div>
+  <img src="screenshots/37-customer-payment.png" alt="Customer Payment screen" loading="lazy" />
+  <p class="purpose">Track customer payment entries and related actions.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s37">
+  <div class="meta">
+    <span class="num">37</span>
+    <div>
+      <h2>Travel Ticket Management (Default)</h2>
+      <p><code>/travel_ticket_management</code></p>
+    </div>
+  </div>
+  <img src="screenshots/38-travel-ticket-management.png" alt="Travel Ticket Management (Default) screen" loading="lazy" />
+  <p class="purpose">Manage and review data for travel ticket management (default).</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s38">
+  <div class="meta">
+    <span class="num">38</span>
+    <div>
+      <h2>Travel Request Details</h2>
+      <p><code>/travel_ticket_management/travel_request_details</code></p>
+    </div>
+  </div>
+  <img src="screenshots/39-travel-ticket-management-travel-request-details.png" alt="Travel Request Details screen" loading="lazy" />
+  <p class="purpose">Review travel request submissions and details.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s39">
+  <div class="meta">
+    <span class="num">39</span>
+    <div>
+      <h2>Approval Request Details</h2>
+      <p><code>/travel_ticket_management/approvals_request_details</code></p>
+    </div>
+  </div>
+  <img src="screenshots/40-travel-ticket-management-approvals-request-details.png" alt="Approval Request Details screen" loading="lazy" />
+  <p class="purpose">Handle approval workflows for travel requests.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s40">
+  <div class="meta">
+    <span class="num">40</span>
+    <div>
+      <h2>Notifications</h2>
+      <p><code>/notifications</code></p>
+    </div>
+  </div>
+  <img src="screenshots/41-notifications.png" alt="Notifications screen" loading="lazy" />
+  <p class="purpose">Check unread/read notification streams.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+
+<section class="card" id="s41">
+  <div class="meta">
+    <span class="num">41</span>
+    <div>
+      <h2>Organizations</h2>
+      <p><code>/organizations</code></p>
+    </div>
+  </div>
+  <img src="screenshots/42-organizations.png" alt="Organizations screen" loading="lazy" />
+  <p class="purpose">Manage organization records and onboarding state.</p>
+  <ul>
+    <li>Use visible filters/search first.</li>
+    <li>Use page actions such as add/edit/export where available.</li>
+    <li>If data blocks keep loading, refresh once and retry.</li>
+  </ul>
+</section>
+    </section>
+  </main>
+</body>
+</html>
