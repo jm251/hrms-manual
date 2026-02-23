@@ -5,32 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HRMS UI-Visible User Manual</title>
   <style>
-    :root { --bg:#f2f4f8; --ink:#182033; --muted:#5b6580; --brand:#2f61e9; --brand-2:#16a2a5; --card:#fff; --line:#d9deea; }
-    *{box-sizing:border-box;} body{margin:0;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(1200px 600px at 10% -20%,#d9e8ff 0%,transparent 60%),radial-gradient(1200px 600px at 90% -20%,#dbfff4 0%,transparent 55%),var(--bg);} 
-    .hero{padding:44px 22px 26px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,rgba(47,97,233,.12),rgba(22,162,165,.1));} 
-    .hero h1{margin:0 0 8px;font-size:clamp(26px,4vw,40px);} .hero p{margin:0;color:var(--muted);font-size:15px;} .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;} 
-    .chip{border:1px solid var(--line);background:#fff;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);} 
-    .wrap{display:grid;grid-template-columns:280px 1fr;gap:18px;padding:18px;} .toc{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px;} 
-    .toc h3{margin:4px 8px 10px;font-size:14px;text-transform:uppercase;color:var(--muted);letter-spacing:.5px;} .toc a{display:block;text-decoration:none;color:var(--ink);font-size:13px;padding:8px 10px;border-radius:8px;line-height:1.35;} .toc a:hover{background:#eef3ff;} 
-    .grid{display:grid;gap:16px;} .card{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px;box-shadow:0 8px 22px rgba(18,31,65,.06);} 
-    .meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;} .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:0 0 auto;font-size:13px;} 
-    h2{margin:0;font-size:20px;} .meta p{margin:2px 0 0;color:var(--muted);font-size:13px;} code{background:#eef2fb;border:1px solid #d8e0f2;border-radius:6px;padding:1px 6px;} 
-    img{width:100%;border-radius:10px;border:1px solid var(--line);margin-top:6px;background:#f8faff;} .purpose{color:#27314a;margin:10px 0 6px;} ul{margin:0;padding-left:18px;color:var(--muted);} li{margin:4px 0;} 
-    @media (max-width:980px){.wrap{grid-template-columns:1fr;}.toc{position:relative;max-height:280px;}}
+    :root {
+      --bg: #f2f4f8;
+      --ink: #182033;
+      --muted: #5b6580;
+      --brand: #2f61e9;
+      --brand2: #16a2a5;
+      --card: #ffffff;
+      --line: #d9deea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -20%, #d9e8ff 0%, transparent 60%),
+        radial-gradient(1200px 600px at 90% -20%, #dbfff4 0%, transparent 55%),
+        var(--bg);
+    }
+    .hero {
+      padding: 42px 22px 24px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(120deg, rgba(47, 97, 233, 0.12), rgba(22, 162, 165, 0.1));
+    }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 40px); }
+    .hero p { margin: 0; color: var(--muted); font-size: 15px; }
+    .chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .wrap { display: grid; grid-template-columns: 300px 1fr; gap: 18px; padding: 18px; }
+    .toc {
+      position: sticky;
+      top: 12px;
+      align-self: start;
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      padding: 12px;
+    }
+    .toc h3 {
+      margin: 4px 8px 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      line-height: 1.35;
+    }
+    .toc a:hover { background: #eef3ff; }
+    .grid { display: grid; gap: 16px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      padding: 14px;
+      box-shadow: 0 8px 22px rgba(18, 31, 65, 0.06);
+    }
+    .meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      flex: 0 0 auto;
+      font-size: 13px;
+    }
+    h2 { margin: 0; font-size: 20px; }
+    .meta p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+    code {
+      background: #eef2fb;
+      border: 1px solid #d8e0f2;
+      border-radius: 6px;
+      padding: 1px 6px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      margin-top: 6px;
+      background: #f8faff;
+    }
+    .block { margin-top: 10px; }
+    .block h3 { margin: 0 0 6px; font-size: 14px; color: #26324f; }
+    .block p { margin: 0; color: #27314a; }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 4px 0; }
+    @media (max-width: 980px) {
+      .wrap { grid-template-columns: 1fr; }
+      .toc { position: relative; max-height: 280px; }
+    }
   </style>
 </head>
 <body>
   <header class="hero">
     <h1>HRMS First-Visitor Manual</h1>
     <p>UI-visible guide generated from live navigation at <strong>https://hrms.srj.group</strong> on <strong>February 23, 2026</strong>.</p>
-    <div class="chips"><span class="chip">Frontend-only manual</span><span class="chip">No backend dependency</span><span class="chip">No role/org rule in guide logic</span><span class="chip">41 captured screens</span></div>
+    <div class="chips">
+      <span class="chip">Frontend-only manual</span>
+      <span class="chip">No backend dependency</span>
+      <span class="chip">No role/org branching in manual content</span>
+      <span class="chip">41 page sections</span>
+    </div>
   </header>
   <main class="wrap">
-    <aside class="toc"><h3>Screen Index</h3>
-<a href="#s1">1. Login</a><a href="#s2">2. Dashboard (Main)</a><a href="#s3">3. Dashboard (Self)</a><a href="#s4">4. User Management</a><a href="#s5">5. Role Management</a><a href="#s6">6. Attendance Management (Default)</a><a href="#s7">7. Attendance Details</a><a href="#s8">8. Attendance List</a><a href="#s9">9. Attendance Summary</a><a href="#s10">10. Leaves (Default)</a><a href="#s11">11. Leaves</a><a href="#s12">12. Unpaid Leaves</a><a href="#s13">13. Leave Types</a><a href="#s14">14. Remaining Leaves</a><a href="#s15">15. Employee Profile</a><a href="#s16">16. Holidays</a><a href="#s17">17. Company Policies</a><a href="#s18">18. Expenses (Claims)</a><a href="#s19">19. Expense Categories</a><a href="#s20">20. Expense Claims</a><a href="#s21">21. Expense Reimbursements</a><a href="#s22">22. Asset Management (Default)</a><a href="#s23">23. Asset Types</a><a href="#s24">24. My Assets</a><a href="#s25">25. Assets</a><a href="#s26">26. Shifts (Legacy Route)</a><a href="#s27">27. Human Resources (Default)</a><a href="#s28">28. HR Shifts</a><a href="#s29">29. Designations</a><a href="#s30">30. Departments</a><a href="#s31">31. Staff</a><a href="#s32">32. Salary Templates</a><a href="#s33">33. Salary Groups</a><a href="#s34">34. Agreements</a><a href="#s35">35. Locations</a><a href="#s36">36. Customer Payment</a><a href="#s37">37. Travel Ticket Management (Default)</a><a href="#s38">38. Travel Request Details</a><a href="#s39">39. Approval Request Details</a><a href="#s40">40. Notifications</a><a href="#s41">41. Organizations</a>
+    <aside class="toc">
+      <h3>Screen Index</h3>
+      <a href="#s1">1. Login</a><a href="#s2">2. Dashboard (Main)</a><a href="#s3">3. Dashboard (Self)</a><a href="#s4">4. User Management</a><a href="#s5">5. Role Management</a><a href="#s6">6. Attendance Management (Default)</a><a href="#s7">7. Attendance Details</a><a href="#s8">8. Attendance List</a><a href="#s9">9. Attendance Summary</a><a href="#s10">10. Leave Management (Default)</a><a href="#s11">11. Leaves</a><a href="#s12">12. Unpaid Leaves</a><a href="#s13">13. Leave Types</a><a href="#s14">14. Remaining Leaves</a><a href="#s15">15. Employee Profile</a><a href="#s16">16. Holidays</a><a href="#s17">17. Company Policies</a><a href="#s18">18. Expenses (Default)</a><a href="#s19">19. Expense Categories</a><a href="#s20">20. Expense Claims</a><a href="#s21">21. Expense Reimbursements</a><a href="#s22">22. Asset Management (Default)</a><a href="#s23">23. Asset Types</a><a href="#s24">24. My Assets</a><a href="#s25">25. Assets</a><a href="#s26">26. Shifts (Legacy Route)</a><a href="#s27">27. Human Resources (Default)</a><a href="#s28">28. HR Shifts</a><a href="#s29">29. Designations</a><a href="#s30">30. Departments</a><a href="#s31">31. Staff</a><a href="#s32">32. Salary Component Templates</a><a href="#s33">33. Salary Groups</a><a href="#s34">34. Agreements</a><a href="#s35">35. Locations</a><a href="#s36">36. Customer Payment</a><a href="#s37">37. Travel Ticket Management (Default)</a><a href="#s38">38. Travel Request Details</a><a href="#s39">39. Approval Request Details</a><a href="#s40">40. Notifications</a><a href="#s41">41. Organizations</a>
     </aside>
     <section class="grid">
-
+      
 <section class="card" id="s1">
   <div class="meta">
     <span class="num">1</span>
@@ -40,12 +143,18 @@
     </div>
   </div>
   <img src="screenshots/01-login.png" alt="Login screen" loading="lazy" />
-  <p class="purpose">Sign in to HRMS and access your workspace.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Use this screen to authenticate and enter the HRMS workspace.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Enter email/username and password to sign in.</li><li>Verify credential errors before retrying login.</li><li>Access the system landing dashboard after successful authentication.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use a valid org account with the right role assignment.</li><li>If sign-in fails repeatedly, confirm password case sensitivity.</li><li>Refresh once if the session state looks stale after logout/login.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s2">
@@ -57,12 +166,18 @@
     </div>
   </div>
   <img src="screenshots/03-dashboard.png" alt="Dashboard (Main) screen" loading="lazy" />
-  <p class="purpose">See company-level metrics and quick operational summaries.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>This is the organization-level dashboard with top metrics and quick status widgets.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Review total/active/inactive employee cards.</li><li>Track attendance summary and clock-in/out panels.</li><li>Open linked modules from sidebar for deeper actions.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Start here if you need a quick daily health check.</li><li>Use the header employee search for quick navigation.</li><li>Revisit after data updates to confirm counts changed.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s3">
@@ -74,12 +189,18 @@
     </div>
   </div>
   <img src="screenshots/04-dashboard-self.png" alt="Dashboard (Self) screen" loading="lazy" />
-  <p class="purpose">Review your own attendance, leave, and personal stats.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Personal dashboard focused on your own profile, leave, and attendance summary.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Check your attendance and leave counters.</li><li>Review personal profile/contact cards.</li><li>Start personal actions like applying leave.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use this page as your daily personal snapshot.</li><li>Location permission prompts affect attendance widgets.</li><li>If values look stale, refresh once and re-check cards.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s4">
@@ -91,12 +212,18 @@
     </div>
   </div>
   <img src="screenshots/05-user-management.png" alt="User Management screen" loading="lazy" />
-  <p class="purpose">Create, search, update, and manage employee records.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Manage system users, account status, and access-related actions.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new users from the top-right action.</li><li>Edit, assign permissions, or delete existing users.</li><li>Filter and search users by role, status, and org.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use search and filters before editing large user lists.</li><li>Check status badges before making account changes.</li><li>Avoid deleting protected/admin-critical accounts.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s5">
@@ -108,12 +235,18 @@
     </div>
   </div>
   <img src="screenshots/06-role-management.png" alt="Role Management screen" loading="lazy" />
-  <p class="purpose">Set up and maintain roles and role-based access templates.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Configure role definitions and review which users are mapped to each role.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new custom roles.</li><li>Review system vs custom role types.</li><li>Inspect per-role user counts before access updates.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use role search when role count grows.</li><li>Keep naming conventions consistent for custom roles.</li><li>Review user impact before editing production roles.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s6">
@@ -125,12 +258,18 @@
     </div>
   </div>
   <img src="screenshots/07-attendance-management.png" alt="Attendance Management (Default) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for attendance management (default).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default attendance landing page (opens the list view in current UI).</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create or upload attendance records.</li><li>Filter records by status, user, and date range.</li><li>Review daily clock-in/out details in tabular view.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Upload in batch for backfilled attendance data.</li><li>Set date range first to reduce table noise.</li><li>Use row actions for quick corrections.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s7">
@@ -142,12 +281,18 @@
     </div>
   </div>
   <img src="screenshots/08-attendance-management-details.png" alt="Attendance Details screen" loading="lazy" />
-  <p class="purpose">Inspect day-level attendance, clock-in/clock-out, and timeline views.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Detailed attendance analytics page with totals, lateness, and timeline actions.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Monitor present/absent/late counters.</li><li>Inspect per-user clock-in/out and day status.</li><li>Open location timeline for attendance events.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use month/year filters for focused review.</li><li>Export results when sharing with HR/payroll teams.</li><li>Cross-check late/half-day rows before approvals.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s8">
@@ -159,12 +304,18 @@
     </div>
   </div>
   <img src="screenshots/09-attendance-management-list.png" alt="Attendance List screen" loading="lazy" />
-  <p class="purpose">Browse attendance entries with filters and export options.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Primary attendance table for operational day-to-day corrections and tracking.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Browse all attendance entries with status columns.</li><li>Filter by date range and attendance type.</li><li>Edit or delete incorrect rows from action controls.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use the status chips and date filters together.</li><li>Scan late entries before end-of-day lock.</li><li>Review IP columns for clock-in anomalies.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s9">
@@ -176,29 +327,41 @@
     </div>
   </div>
   <img src="screenshots/10-attendance-management-summary.png" alt="Attendance Summary screen" loading="lazy" />
-  <p class="purpose">Track aggregate attendance totals by date/user.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Calendar-style summary grid of attendance markers by employee and date.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Review attendance pattern across a month.</li><li>Track present/absent/leave/holiday distributions.</li><li>Export summary for management reporting.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Set year and month before analysis.</li><li>Use this for trend review, not row-level edits.</li><li>Compare totals column to catch outliers quickly.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s10">
   <div class="meta">
     <span class="num">10</span>
     <div>
-      <h2>Leaves (Default)</h2>
+      <h2>Leave Management (Default)</h2>
       <p><code>/leave-management</code></p>
     </div>
   </div>
-  <img src="screenshots/11-leave-management.png" alt="Leaves (Default) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for leaves (default).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <img src="screenshots/11-leave-management.png" alt="Leave Management (Default) screen" loading="lazy" />
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default leave module entry (opens leave list in current UI).</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new leave requests.</li><li>Review leave requests by status tabs.</li><li>Filter by leave type and employee.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use Pending tab for approval workload first.</li><li>Validate leave type before approval/rejection.</li><li>Keep user filter scoped for faster review.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s11">
@@ -210,12 +373,18 @@
     </div>
   </div>
   <img src="screenshots/12-leave-management-leaves.png" alt="Leaves screen" loading="lazy" />
-  <p class="purpose">Apply, approve, review, and filter leave records.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Detailed leave request table including status and action controls.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Approve or reject pending leave requests.</li><li>Inspect leave duration and half-day flags.</li><li>Track user-wise leave history.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Sort by start/end date during monthly closing.</li><li>Use leave-type filter to audit policy compliance.</li><li>Confirm manager/admin actions before finalizing status.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s12">
@@ -227,12 +396,18 @@
     </div>
   </div>
   <img src="screenshots/13-leave-management-unpaid-leaves.png" alt="Unpaid Leaves screen" loading="lazy" />
-  <p class="purpose">Monitor unpaid leave by month and employee.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Monthly unpaid leave ledger grouped by user and month.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Track unpaid leave month-by-month.</li><li>Check details for loss-of-pay impact.</li><li>Validate unpaid leave count before payroll sync.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use year and user selectors to narrow data.</li><li>Review zero-value months for consistency.</li><li>Coordinate with payroll when unpaid leave changes.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s13">
@@ -244,12 +419,18 @@
     </div>
   </div>
   <img src="screenshots/14-leave-management-leave-types.png" alt="Leave Types screen" loading="lazy" />
-  <p class="purpose">Configure leave categories and limits.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Master configuration for leave policies, limits, and paid/unpaid flags.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and edit leave type definitions.</li><li>Set monthly caps and attendance conditions.</li><li>Control paid vs unpaid behavior per leave type.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Update policy values before leave cycle starts.</li><li>Avoid frequent renaming to prevent confusion.</li><li>Validate paid flag with HR policy docs.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s14">
@@ -261,12 +442,18 @@
     </div>
   </div>
   <img src="screenshots/15-leave-management-remaining-leaves.png" alt="Remaining Leaves screen" loading="lazy" />
-  <p class="purpose">Check balance remaining for employees.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Balance view showing allocated, used, pending, and available leaves.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Check employee leave balances quickly.</li><li>Audit leave allocation against usage.</li><li>Identify low-balance employees for planning.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use year filter for annual reconciliation.</li><li>Review pending column before final balance reporting.</li><li>Cross-check with approved leaves during payroll cutoffs.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s15">
@@ -278,12 +465,18 @@
     </div>
   </div>
   <img src="screenshots/16-profile.png" alt="Employee Profile screen" loading="lazy" />
-  <p class="purpose">View profile details and personal information.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Personal profile page with employee identity and org details.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Review employee ID, department, and reporting structure.</li><li>Check joining date, work email, and location fields.</li><li>Access profile-level actions such as password change.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Keep profile data updated for HR accuracy.</li><li>Use this page to verify onboarding information.</li><li>Report missing department/reporting info to admin.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s16">
@@ -295,12 +488,18 @@
     </div>
   </div>
   <img src="screenshots/17-holidays.png" alt="Holidays screen" loading="lazy" />
-  <p class="purpose">Manage and review company holiday calendar.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Holiday calendar management for company-wide non-working dates.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and maintain holiday entries.</li><li>Review dates by year and location.</li><li>Export or share holiday schedule with teams.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Publish annual holidays before fiscal start.</li><li>Avoid duplicate holiday records across locations.</li><li>Verify timezone/location applicability when adding dates.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s17">
@@ -312,29 +511,41 @@
     </div>
   </div>
   <img src="screenshots/18-company-policies.png" alt="Company Policies screen" loading="lazy" />
-  <p class="purpose">Publish and review policy documents.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Policy registry where HR/admin teams manage policy documents and visibility.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and edit policy records.</li><li>Filter policies by location or title.</li><li>Track active policy status and rule metadata.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use clear policy naming for easier search.</li><li>Review state/country mapping for each policy.</li><li>Keep only current policies in active status.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s18">
   <div class="meta">
     <span class="num">18</span>
     <div>
-      <h2>Expenses (Claims)</h2>
+      <h2>Expenses (Default)</h2>
       <p><code>/expenses</code></p>
     </div>
   </div>
-  <img src="screenshots/19-expenses.png" alt="Expenses (Claims) screen" loading="lazy" />
-  <p class="purpose">Submit and track expense claims.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <img src="screenshots/19-expenses.png" alt="Expenses (Default) screen" loading="lazy" />
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default expense landing page (claims table in current UI).</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new expense claims.</li><li>Filter expense list by status/category/date.</li><li>Review claim action icons per row.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use date range filters during monthly close.</li><li>Validate category before approving reimbursement path.</li><li>Check status chips for pending follow-ups.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s19">
@@ -346,12 +557,18 @@
     </div>
   </div>
   <img src="screenshots/20-expenses-categories.png" alt="Expense Categories screen" loading="lazy" />
-  <p class="purpose">Configure expense category definitions.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Configuration page for expense category rules and policy linkage.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create/edit category definitions.</li><li>Map categories to policy and GL code.</li><li>Enable/disable categories by operational needs.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Keep GL codes validated with finance team.</li><li>Use status filter to review inactive categories.</li><li>Document category usage notes in descriptions.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s20">
@@ -363,12 +580,18 @@
     </div>
   </div>
   <img src="screenshots/21-expenses-claims.png" alt="Expense Claims screen" loading="lazy" />
-  <p class="purpose">Review claims with status and action controls.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Claims workflow page for submitted expense requests and their statuses.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Inspect claim details and attached actions.</li><li>Track reimbursement status per employee.</li><li>Filter claims for review and approval queues.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Prioritize unresolved claims first.</li><li>Use user filter to validate repeated claims.</li><li>Cross-check category vs claimed amount quickly.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s21">
@@ -380,12 +603,18 @@
     </div>
   </div>
   <img src="screenshots/22-expenses-reimbursements.png" alt="Expense Reimbursements screen" loading="lazy" />
-  <p class="purpose">Track reimbursement totals, methods, and processing details.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Payment-side view for reimbursement processing and reference tracking.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Track reimbursement totals and monthly breakdown.</li><li>Review payment method/date/reference for each payout.</li><li>Search reimbursements by employee or expense ID.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use payment reference for finance reconciliation.</li><li>Filter by month when matching bank transfers.</li><li>Verify approver and amount before marking complete.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s22">
@@ -397,12 +626,18 @@
     </div>
   </div>
   <img src="screenshots/23-asset-management.png" alt="Asset Management (Default) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for asset management (default).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default asset module route (currently opens assets list view).</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Browse active assets and assignment state.</li><li>Filter by vendor location and assignee.</li><li>Create new asset records from the top action.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Keep serial numbers unique and searchable.</li><li>Use status tabs to separate working/non-working assets.</li><li>Review assignment before issuing returns.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s23">
@@ -414,12 +649,18 @@
     </div>
   </div>
   <img src="screenshots/24-asset-management-asset-types.png" alt="Asset Types screen" loading="lazy" />
-  <p class="purpose">Define asset categories and metadata.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Master list for asset categories and type-level controls.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and maintain asset type records.</li><li>Search types by name for quick edits.</li><li>Use row actions to view/update/remove types.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Normalize naming (Laptop, Monitor, etc.) to avoid duplicates.</li><li>Review type list before onboarding new hardware classes.</li><li>Archive unused types carefully to preserve history.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s24">
@@ -431,12 +672,18 @@
     </div>
   </div>
   <img src="screenshots/25-asset-management-self-assets.png" alt="My Assets screen" loading="lazy" />
-  <p class="purpose">Review assets assigned to your profile.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Self-service asset portal showing available/requested assets.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Browse available assets to request.</li><li>Review request status in “My Requests”.</li><li>Filter catalog by asset type/availability.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use search before raising duplicate requests.</li><li>Track request status before contacting admin.</li><li>Confirm location and serial details when requesting.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s25">
@@ -448,12 +695,18 @@
     </div>
   </div>
   <img src="screenshots/26-asset-management-assets.png" alt="Assets screen" loading="lazy" />
-  <p class="purpose">Manage issued company assets and assignments.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Operational asset inventory with assignment and lifecycle actions.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Manage asset records and ownership mapping.</li><li>Reassign, update, or retire assets from row actions.</li><li>Filter by working state and user assignment.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Audit assigned-to column regularly.</li><li>Use search for serial-based troubleshooting.</li><li>Retire non-working assets with clear status updates.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s26">
@@ -465,12 +718,18 @@
     </div>
   </div>
   <img src="screenshots/27-shifts.png" alt="Shifts (Legacy Route) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for shifts (legacy route).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Shift master page for defining shift time rules and clock windows.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and edit shift templates.</li><li>Configure late mark and early clock-in limits.</li><li>Review employee count per shift.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Confirm timezone/location implications for each shift.</li><li>Keep shift names unique and descriptive.</li><li>Review self-clocking flag before publishing changes.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s27">
@@ -482,12 +741,18 @@
     </div>
   </div>
   <img src="screenshots/28-human-resources.png" alt="Human Resources (Default) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for human resources (default).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default HR module landing (currently opens staff list).</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Access staff records with department/designation filters.</li><li>Use quick actions for view/edit/delete.</li><li>Navigate to HR sub-modules from sidebar.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Start with org filter before deep HR operations.</li><li>Use status tabs for active/inactive cleanup.</li><li>Leverage top actions for adding new staff.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s28">
@@ -499,12 +764,18 @@
     </div>
   </div>
   <img src="screenshots/29-human-resources-shifts.png" alt="HR Shifts screen" loading="lazy" />
-  <p class="purpose">Configure and maintain shift schedules.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>HR shift administration view tied to human-resources module.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Manage shift definitions in HR context.</li><li>Search shift names and export lists.</li><li>Control self-clocking options per shift.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Keep HR shifts aligned with attendance policy.</li><li>Validate total employee count after shift edits.</li><li>Export before major structure changes for backup.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s29">
@@ -516,12 +787,18 @@
     </div>
   </div>
   <img src="screenshots/30-human-resources-designations.png" alt="Designations screen" loading="lazy" />
-  <p class="purpose">Maintain role/designation master list.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Designation master table used across employee profiles and approvals.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and maintain designation entries.</li><li>Track employee count mapped to each designation.</li><li>Edit/remove outdated designations.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Avoid duplicate manager-level titles.</li><li>Check employee count before deleting designations.</li><li>Use designation naming standards organization-wide.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s30">
@@ -533,12 +810,18 @@
     </div>
   </div>
   <img src="screenshots/31-human-resources-departments.png" alt="Departments screen" loading="lazy" />
-  <p class="purpose">Create and organize department structure.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Department master setup for HR hierarchy and staff grouping.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Add or edit department records.</li><li>Review total employees per department.</li><li>Search and sort departments for governance.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Map each employee to a single owning department.</li><li>Keep department names stable for reports.</li><li>Run cleanup on unused departments periodically.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s31">
@@ -550,29 +833,41 @@
     </div>
   </div>
   <img src="screenshots/32-human-resources-staffs.png" alt="Staff screen" loading="lazy" />
-  <p class="purpose">Manage staff directory and HR status.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Detailed staff directory with org, designation, and status controls.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Filter staff by department/designation/location.</li><li>Review status markers like active/terminated.</li><li>Use row actions for detailed staff operations.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use tabs (All/Active/Inactive) to segment reviews.</li><li>Verify designation before changing staff status.</li><li>Export when preparing HR monthly reports.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s32">
   <div class="meta">
     <span class="num">32</span>
     <div>
-      <h2>Salary Templates</h2>
+      <h2>Salary Component Templates</h2>
       <p><code>/human-resources/salary-templates</code></p>
     </div>
   </div>
-  <img src="screenshots/33-human-resources-salary-templates.png" alt="Salary Templates screen" loading="lazy" />
-  <p class="purpose">Define salary template structures.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <img src="screenshots/33-human-resources-salary-templates.png" alt="Salary Component Templates screen" loading="lazy" />
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Template catalog for earnings/deductions and component calculations.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create salary component templates.</li><li>Define calculation method and default values.</li><li>Track template usage before edits or removals.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Validate percentages against payroll policy.</li><li>Separate earnings and deductions clearly.</li><li>Review usage count before deleting a component.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s33">
@@ -584,12 +879,18 @@
     </div>
   </div>
   <img src="screenshots/34-human-resources-salary-groups.png" alt="Salary Groups screen" loading="lazy" />
-  <p class="purpose">Group templates into compensation packages.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Group-level compensation structures composed of salary templates.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create salary groups for positions/levels.</li><li>Attach component templates to each group.</li><li>Filter groups by status for maintenance.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use naming by level (Entry/Mid/Senior) for clarity.</li><li>Activate only finalized salary structures.</li><li>Audit template count before applying group to staff.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s34">
@@ -601,12 +902,18 @@
     </div>
   </div>
   <img src="screenshots/35-human-resources-agreements.png" alt="Agreements screen" loading="lazy" />
-  <p class="purpose">Create and manage employee agreements/templates.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Agreement template hub for HR documents and employee agreement records.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create and manage agreement templates.</li><li>Switch between template and employee agreement tabs.</li><li>Search existing templates before creating new ones.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Version agreement templates when policy changes.</li><li>Use clear titles to avoid duplicate templates.</li><li>Keep legal-approved templates marked and traceable.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s35">
@@ -618,12 +925,18 @@
     </div>
   </div>
   <img src="screenshots/36-locations.png" alt="Locations screen" loading="lazy" />
-  <p class="purpose">Configure work locations and related metadata.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Work location registry used across attendance, assets, and HR records.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Add and edit location records.</li><li>Classify locations by type (office/vendor).</li><li>Search locations for mapping and cleanup.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use consistent location naming with city/site info.</li><li>Validate address completeness for office locations.</li><li>Retire obsolete sites to reduce operational noise.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s36">
@@ -635,12 +948,18 @@
     </div>
   </div>
   <img src="screenshots/37-customer-payment.png" alt="Customer Payment screen" loading="lazy" />
-  <p class="purpose">Track customer payment entries and related actions.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Customer payment tracking page with payment status and receipt actions.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Record new customer payments.</li><li>Filter by status, date, method, and recorder.</li><li>Review receipts and sync state per transaction.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use date filters during daily cash reconciliation.</li><li>Check sync status before closing accounting cycle.</li><li>Attach or verify receipt links for audit readiness.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s37">
@@ -652,12 +971,18 @@
     </div>
   </div>
   <img src="screenshots/38-travel-ticket-management.png" alt="Travel Ticket Management (Default) screen" loading="lazy" />
-  <p class="purpose">Manage and review data for travel ticket management (default).</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Default travel module route; currently lands on personal travel request list.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Open travel request pipeline from module root.</li><li>Create a new travel request quickly.</li><li>Review current personal request status.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use status filter before raising follow-up requests.</li><li>Keep request purpose clear for faster approvals.</li><li>Expect this route to open the request-details screen.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s38">
@@ -669,12 +994,18 @@
     </div>
   </div>
   <img src="screenshots/39-travel-ticket-management-travel-request-details.png" alt="Travel Request Details screen" loading="lazy" />
-  <p class="purpose">Review travel request submissions and details.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Detailed list of submitted personal travel requests and their statuses.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new travel requests.</li><li>Track request history and current status.</li><li>Use table actions to manage request lifecycle.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Set status filter to locate pending requests.</li><li>Review requester/purpose columns before updates.</li><li>Use this page as your primary travel self-service view.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s39">
@@ -686,12 +1017,18 @@
     </div>
   </div>
   <img src="screenshots/40-travel-ticket-management-approvals-request-details.png" alt="Approval Request Details screen" loading="lazy" />
-  <p class="purpose">Handle approval workflows for travel requests.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Manager/admin approval console for team travel requests by decision state.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Review pending travel approvals.</li><li>Track approved/rejected totals at the top cards.</li><li>Filter and process requests by status.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Prioritize pending queue during daily review.</li><li>Use status dropdown to focus on bottlenecks.</li><li>Validate trip purpose and dates before approval.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s40">
@@ -703,12 +1040,18 @@
     </div>
   </div>
   <img src="screenshots/41-notifications.png" alt="Notifications screen" loading="lazy" />
-  <p class="purpose">Check unread/read notification streams.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Central notification inbox grouped by all/unread/read tabs.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>View system and workflow alerts.</li><li>Switch between unread and read message groups.</li><li>Confirm no missed operational notifications.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Check unread tab first at day start.</li><li>Use notifications after major approvals/actions.</li><li>Clear old alerts regularly for signal quality.</li></ul>
+  </div>
 </section>
 
 <section class="card" id="s41">
@@ -720,12 +1063,18 @@
     </div>
   </div>
   <img src="screenshots/42-organizations.png" alt="Organizations screen" loading="lazy" />
-  <p class="purpose">Manage organization records and onboarding state.</p>
-  <ul>
-    <li>Use visible filters/search first.</li>
-    <li>Use page actions such as add/edit/export where available.</li>
-    <li>If data blocks keep loading, refresh once and retry.</li>
-  </ul>
+  <div class="block">
+    <h3>Page Overview</h3>
+    <p>Organization management console for multi-company setup and access scope.</p>
+  </div>
+  <div class="block">
+    <h3>What You Can Do Here</h3>
+    <ul><li>Create new organizations.</li><li>Review active/inactive org counts and cards.</li><li>Manage org-level settings from card actions.</li></ul>
+  </div>
+  <div class="block">
+    <h3>Quick Tips</h3>
+    <ul><li>Use status filter to monitor inactive organizations.</li><li>Verify timezone/currency when onboarding orgs.</li><li>Use search for quick org lookups in large lists.</li></ul>
+  </div>
 </section>
     </section>
   </main>

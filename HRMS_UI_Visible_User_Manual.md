@@ -4,14 +4,14 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ## Scope
 - Frontend-visible walkthrough only.
-- No role/organization logic added in this document.
-- Each section is based on what is visible in the captured screen.
+- Content is based on currently visible UI pages and controls.
+- No backend-driven manual content is used.
 
 ## First-Time Steps
-1. Open the login page.
-2. Sign in with valid credentials.
-3. Start with Dashboard, then navigate from the left sidebar.
-4. Use top search, filters, and action buttons (`Add`, `Edit`, `Export`) where available.
+1. Open the login page and sign in.
+2. Start from Dashboard and use the left sidebar for module navigation.
+3. Use page-level filters/search before taking row actions.
+4. Use export and action buttons where available.
 
 ## Screen Index
 1. **Login** - `/login`
@@ -23,7 +23,7 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 7. **Attendance Details** - `/attendance-management/details`
 8. **Attendance List** - `/attendance-management/list`
 9. **Attendance Summary** - `/attendance-management/summary`
-10. **Leaves (Default)** - `/leave-management`
+10. **Leave Management (Default)** - `/leave-management`
 11. **Leaves** - `/leave-management/leaves`
 12. **Unpaid Leaves** - `/leave-management/unpaid-leaves`
 13. **Leave Types** - `/leave-management/leave_types`
@@ -31,7 +31,7 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 15. **Employee Profile** - `/profile`
 16. **Holidays** - `/holidays`
 17. **Company Policies** - `/company-policies`
-18. **Expenses (Claims)** - `/expenses`
+18. **Expenses (Default)** - `/expenses`
 19. **Expense Categories** - `/expenses/categories`
 20. **Expense Claims** - `/expenses/claims`
 21. **Expense Reimbursements** - `/expenses/reimbursements`
@@ -45,7 +45,7 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 29. **Designations** - `/human-resources/designations`
 30. **Departments** - `/human-resources/departments`
 31. **Staff** - `/human-resources/staffs`
-32. **Salary Templates** - `/human-resources/salary-templates`
+32. **Salary Component Templates** - `/human-resources/salary-templates`
 33. **Salary Groups** - `/human-resources/salary-groups`
 34. **Agreements** - `/human-resources/agreements`
 35. **Locations** - `/locations`
@@ -63,14 +63,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Login](screenshots/01-login.png)
 
+**Page Overview**
+- Use this screen to authenticate and enter the HRMS workspace.
+
 **What You Can Do Here**
-- Sign in to HRMS and access your workspace.
-- Use the visible actions and filters on this page to complete tasks.
+- Enter email/username and password to sign in.
+- Verify credential errors before retrying login.
+- Access the system landing dashboard after successful authentication.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use a valid org account with the right role assignment.
+- If sign-in fails repeatedly, confirm password case sensitivity.
+- Refresh once if the session state looks stale after logout/login.
 
 ---
 
@@ -79,14 +83,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Dashboard (Main)](screenshots/03-dashboard.png)
 
+**Page Overview**
+- This is the organization-level dashboard with top metrics and quick status widgets.
+
 **What You Can Do Here**
-- See company-level metrics and quick operational summaries.
-- Use the visible actions and filters on this page to complete tasks.
+- Review total/active/inactive employee cards.
+- Track attendance summary and clock-in/out panels.
+- Open linked modules from sidebar for deeper actions.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Start here if you need a quick daily health check.
+- Use the header employee search for quick navigation.
+- Revisit after data updates to confirm counts changed.
 
 ---
 
@@ -95,14 +103,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Dashboard (Self)](screenshots/04-dashboard-self.png)
 
+**Page Overview**
+- Personal dashboard focused on your own profile, leave, and attendance summary.
+
 **What You Can Do Here**
-- Review your own attendance, leave, and personal stats.
-- Use the visible actions and filters on this page to complete tasks.
+- Check your attendance and leave counters.
+- Review personal profile/contact cards.
+- Start personal actions like applying leave.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use this page as your daily personal snapshot.
+- Location permission prompts affect attendance widgets.
+- If values look stale, refresh once and re-check cards.
 
 ---
 
@@ -111,14 +123,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![User Management](screenshots/05-user-management.png)
 
+**Page Overview**
+- Manage system users, account status, and access-related actions.
+
 **What You Can Do Here**
-- Create, search, update, and manage employee records.
-- Use the visible actions and filters on this page to complete tasks.
+- Create new users from the top-right action.
+- Edit, assign permissions, or delete existing users.
+- Filter and search users by role, status, and org.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use search and filters before editing large user lists.
+- Check status badges before making account changes.
+- Avoid deleting protected/admin-critical accounts.
 
 ---
 
@@ -127,14 +143,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Role Management](screenshots/06-role-management.png)
 
+**Page Overview**
+- Configure role definitions and review which users are mapped to each role.
+
 **What You Can Do Here**
-- Set up and maintain roles and role-based access templates.
-- Use the visible actions and filters on this page to complete tasks.
+- Create new custom roles.
+- Review system vs custom role types.
+- Inspect per-role user counts before access updates.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use role search when role count grows.
+- Keep naming conventions consistent for custom roles.
+- Review user impact before editing production roles.
 
 ---
 
@@ -143,14 +163,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Attendance Management (Default)](screenshots/07-attendance-management.png)
 
+**Page Overview**
+- Default attendance landing page (opens the list view in current UI).
+
 **What You Can Do Here**
-- Manage and review data for attendance management (default).
-- Use the visible actions and filters on this page to complete tasks.
+- Create or upload attendance records.
+- Filter records by status, user, and date range.
+- Review daily clock-in/out details in tabular view.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Upload in batch for backfilled attendance data.
+- Set date range first to reduce table noise.
+- Use row actions for quick corrections.
 
 ---
 
@@ -159,14 +183,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Attendance Details](screenshots/08-attendance-management-details.png)
 
+**Page Overview**
+- Detailed attendance analytics page with totals, lateness, and timeline actions.
+
 **What You Can Do Here**
-- Inspect day-level attendance, clock-in/clock-out, and timeline views.
-- Use the visible actions and filters on this page to complete tasks.
+- Monitor present/absent/late counters.
+- Inspect per-user clock-in/out and day status.
+- Open location timeline for attendance events.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use month/year filters for focused review.
+- Export results when sharing with HR/payroll teams.
+- Cross-check late/half-day rows before approvals.
 
 ---
 
@@ -175,14 +203,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Attendance List](screenshots/09-attendance-management-list.png)
 
+**Page Overview**
+- Primary attendance table for operational day-to-day corrections and tracking.
+
 **What You Can Do Here**
-- Browse attendance entries with filters and export options.
-- Use the visible actions and filters on this page to complete tasks.
+- Browse all attendance entries with status columns.
+- Filter by date range and attendance type.
+- Edit or delete incorrect rows from action controls.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use the status chips and date filters together.
+- Scan late entries before end-of-day lock.
+- Review IP columns for clock-in anomalies.
 
 ---
 
@@ -191,30 +223,38 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Attendance Summary](screenshots/10-attendance-management-summary.png)
 
+**Page Overview**
+- Calendar-style summary grid of attendance markers by employee and date.
+
 **What You Can Do Here**
-- Track aggregate attendance totals by date/user.
-- Use the visible actions and filters on this page to complete tasks.
+- Review attendance pattern across a month.
+- Track present/absent/leave/holiday distributions.
+- Export summary for management reporting.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Set year and month before analysis.
+- Use this for trend review, not row-level edits.
+- Compare totals column to catch outliers quickly.
 
 ---
 
-## 10. Leaves (Default)
+## 10. Leave Management (Default)
 **Route:** `/leave-management`
 
-![Leaves (Default)](screenshots/11-leave-management.png)
+![Leave Management (Default)](screenshots/11-leave-management.png)
+
+**Page Overview**
+- Default leave module entry (opens leave list in current UI).
 
 **What You Can Do Here**
-- Manage and review data for leaves (default).
-- Use the visible actions and filters on this page to complete tasks.
+- Create new leave requests.
+- Review leave requests by status tabs.
+- Filter by leave type and employee.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use Pending tab for approval workload first.
+- Validate leave type before approval/rejection.
+- Keep user filter scoped for faster review.
 
 ---
 
@@ -223,14 +263,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Leaves](screenshots/12-leave-management-leaves.png)
 
+**Page Overview**
+- Detailed leave request table including status and action controls.
+
 **What You Can Do Here**
-- Apply, approve, review, and filter leave records.
-- Use the visible actions and filters on this page to complete tasks.
+- Approve or reject pending leave requests.
+- Inspect leave duration and half-day flags.
+- Track user-wise leave history.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Sort by start/end date during monthly closing.
+- Use leave-type filter to audit policy compliance.
+- Confirm manager/admin actions before finalizing status.
 
 ---
 
@@ -239,14 +283,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Unpaid Leaves](screenshots/13-leave-management-unpaid-leaves.png)
 
+**Page Overview**
+- Monthly unpaid leave ledger grouped by user and month.
+
 **What You Can Do Here**
-- Monitor unpaid leave by month and employee.
-- Use the visible actions and filters on this page to complete tasks.
+- Track unpaid leave month-by-month.
+- Check details for loss-of-pay impact.
+- Validate unpaid leave count before payroll sync.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use year and user selectors to narrow data.
+- Review zero-value months for consistency.
+- Coordinate with payroll when unpaid leave changes.
 
 ---
 
@@ -255,14 +303,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Leave Types](screenshots/14-leave-management-leave-types.png)
 
+**Page Overview**
+- Master configuration for leave policies, limits, and paid/unpaid flags.
+
 **What You Can Do Here**
-- Configure leave categories and limits.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and edit leave type definitions.
+- Set monthly caps and attendance conditions.
+- Control paid vs unpaid behavior per leave type.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Update policy values before leave cycle starts.
+- Avoid frequent renaming to prevent confusion.
+- Validate paid flag with HR policy docs.
 
 ---
 
@@ -271,14 +323,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Remaining Leaves](screenshots/15-leave-management-remaining-leaves.png)
 
+**Page Overview**
+- Balance view showing allocated, used, pending, and available leaves.
+
 **What You Can Do Here**
-- Check balance remaining for employees.
-- Use the visible actions and filters on this page to complete tasks.
+- Check employee leave balances quickly.
+- Audit leave allocation against usage.
+- Identify low-balance employees for planning.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use year filter for annual reconciliation.
+- Review pending column before final balance reporting.
+- Cross-check with approved leaves during payroll cutoffs.
 
 ---
 
@@ -287,14 +343,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Employee Profile](screenshots/16-profile.png)
 
+**Page Overview**
+- Personal profile page with employee identity and org details.
+
 **What You Can Do Here**
-- View profile details and personal information.
-- Use the visible actions and filters on this page to complete tasks.
+- Review employee ID, department, and reporting structure.
+- Check joining date, work email, and location fields.
+- Access profile-level actions such as password change.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Keep profile data updated for HR accuracy.
+- Use this page to verify onboarding information.
+- Report missing department/reporting info to admin.
 
 ---
 
@@ -303,14 +363,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Holidays](screenshots/17-holidays.png)
 
+**Page Overview**
+- Holiday calendar management for company-wide non-working dates.
+
 **What You Can Do Here**
-- Manage and review company holiday calendar.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and maintain holiday entries.
+- Review dates by year and location.
+- Export or share holiday schedule with teams.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Publish annual holidays before fiscal start.
+- Avoid duplicate holiday records across locations.
+- Verify timezone/location applicability when adding dates.
 
 ---
 
@@ -319,30 +383,38 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Company Policies](screenshots/18-company-policies.png)
 
+**Page Overview**
+- Policy registry where HR/admin teams manage policy documents and visibility.
+
 **What You Can Do Here**
-- Publish and review policy documents.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and edit policy records.
+- Filter policies by location or title.
+- Track active policy status and rule metadata.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use clear policy naming for easier search.
+- Review state/country mapping for each policy.
+- Keep only current policies in active status.
 
 ---
 
-## 18. Expenses (Claims)
+## 18. Expenses (Default)
 **Route:** `/expenses`
 
-![Expenses (Claims)](screenshots/19-expenses.png)
+![Expenses (Default)](screenshots/19-expenses.png)
+
+**Page Overview**
+- Default expense landing page (claims table in current UI).
 
 **What You Can Do Here**
-- Submit and track expense claims.
-- Use the visible actions and filters on this page to complete tasks.
+- Create new expense claims.
+- Filter expense list by status/category/date.
+- Review claim action icons per row.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use date range filters during monthly close.
+- Validate category before approving reimbursement path.
+- Check status chips for pending follow-ups.
 
 ---
 
@@ -351,14 +423,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Expense Categories](screenshots/20-expenses-categories.png)
 
+**Page Overview**
+- Configuration page for expense category rules and policy linkage.
+
 **What You Can Do Here**
-- Configure expense category definitions.
-- Use the visible actions and filters on this page to complete tasks.
+- Create/edit category definitions.
+- Map categories to policy and GL code.
+- Enable/disable categories by operational needs.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Keep GL codes validated with finance team.
+- Use status filter to review inactive categories.
+- Document category usage notes in descriptions.
 
 ---
 
@@ -367,14 +443,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Expense Claims](screenshots/21-expenses-claims.png)
 
+**Page Overview**
+- Claims workflow page for submitted expense requests and their statuses.
+
 **What You Can Do Here**
-- Review claims with status and action controls.
-- Use the visible actions and filters on this page to complete tasks.
+- Inspect claim details and attached actions.
+- Track reimbursement status per employee.
+- Filter claims for review and approval queues.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Prioritize unresolved claims first.
+- Use user filter to validate repeated claims.
+- Cross-check category vs claimed amount quickly.
 
 ---
 
@@ -383,14 +463,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Expense Reimbursements](screenshots/22-expenses-reimbursements.png)
 
+**Page Overview**
+- Payment-side view for reimbursement processing and reference tracking.
+
 **What You Can Do Here**
-- Track reimbursement totals, methods, and processing details.
-- Use the visible actions and filters on this page to complete tasks.
+- Track reimbursement totals and monthly breakdown.
+- Review payment method/date/reference for each payout.
+- Search reimbursements by employee or expense ID.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use payment reference for finance reconciliation.
+- Filter by month when matching bank transfers.
+- Verify approver and amount before marking complete.
 
 ---
 
@@ -399,14 +483,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Asset Management (Default)](screenshots/23-asset-management.png)
 
+**Page Overview**
+- Default asset module route (currently opens assets list view).
+
 **What You Can Do Here**
-- Manage and review data for asset management (default).
-- Use the visible actions and filters on this page to complete tasks.
+- Browse active assets and assignment state.
+- Filter by vendor location and assignee.
+- Create new asset records from the top action.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Keep serial numbers unique and searchable.
+- Use status tabs to separate working/non-working assets.
+- Review assignment before issuing returns.
 
 ---
 
@@ -415,14 +503,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Asset Types](screenshots/24-asset-management-asset-types.png)
 
+**Page Overview**
+- Master list for asset categories and type-level controls.
+
 **What You Can Do Here**
-- Define asset categories and metadata.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and maintain asset type records.
+- Search types by name for quick edits.
+- Use row actions to view/update/remove types.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Normalize naming (Laptop, Monitor, etc.) to avoid duplicates.
+- Review type list before onboarding new hardware classes.
+- Archive unused types carefully to preserve history.
 
 ---
 
@@ -431,14 +523,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![My Assets](screenshots/25-asset-management-self-assets.png)
 
+**Page Overview**
+- Self-service asset portal showing available/requested assets.
+
 **What You Can Do Here**
-- Review assets assigned to your profile.
-- Use the visible actions and filters on this page to complete tasks.
+- Browse available assets to request.
+- Review request status in “My Requests”.
+- Filter catalog by asset type/availability.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use search before raising duplicate requests.
+- Track request status before contacting admin.
+- Confirm location and serial details when requesting.
 
 ---
 
@@ -447,14 +543,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Assets](screenshots/26-asset-management-assets.png)
 
+**Page Overview**
+- Operational asset inventory with assignment and lifecycle actions.
+
 **What You Can Do Here**
-- Manage issued company assets and assignments.
-- Use the visible actions and filters on this page to complete tasks.
+- Manage asset records and ownership mapping.
+- Reassign, update, or retire assets from row actions.
+- Filter by working state and user assignment.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Audit assigned-to column regularly.
+- Use search for serial-based troubleshooting.
+- Retire non-working assets with clear status updates.
 
 ---
 
@@ -463,14 +563,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Shifts (Legacy Route)](screenshots/27-shifts.png)
 
+**Page Overview**
+- Shift master page for defining shift time rules and clock windows.
+
 **What You Can Do Here**
-- Manage and review data for shifts (legacy route).
-- Use the visible actions and filters on this page to complete tasks.
+- Create and edit shift templates.
+- Configure late mark and early clock-in limits.
+- Review employee count per shift.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Confirm timezone/location implications for each shift.
+- Keep shift names unique and descriptive.
+- Review self-clocking flag before publishing changes.
 
 ---
 
@@ -479,14 +583,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Human Resources (Default)](screenshots/28-human-resources.png)
 
+**Page Overview**
+- Default HR module landing (currently opens staff list).
+
 **What You Can Do Here**
-- Manage and review data for human resources (default).
-- Use the visible actions and filters on this page to complete tasks.
+- Access staff records with department/designation filters.
+- Use quick actions for view/edit/delete.
+- Navigate to HR sub-modules from sidebar.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Start with org filter before deep HR operations.
+- Use status tabs for active/inactive cleanup.
+- Leverage top actions for adding new staff.
 
 ---
 
@@ -495,14 +603,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![HR Shifts](screenshots/29-human-resources-shifts.png)
 
+**Page Overview**
+- HR shift administration view tied to human-resources module.
+
 **What You Can Do Here**
-- Configure and maintain shift schedules.
-- Use the visible actions and filters on this page to complete tasks.
+- Manage shift definitions in HR context.
+- Search shift names and export lists.
+- Control self-clocking options per shift.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Keep HR shifts aligned with attendance policy.
+- Validate total employee count after shift edits.
+- Export before major structure changes for backup.
 
 ---
 
@@ -511,14 +623,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Designations](screenshots/30-human-resources-designations.png)
 
+**Page Overview**
+- Designation master table used across employee profiles and approvals.
+
 **What You Can Do Here**
-- Maintain role/designation master list.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and maintain designation entries.
+- Track employee count mapped to each designation.
+- Edit/remove outdated designations.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Avoid duplicate manager-level titles.
+- Check employee count before deleting designations.
+- Use designation naming standards organization-wide.
 
 ---
 
@@ -527,14 +643,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Departments](screenshots/31-human-resources-departments.png)
 
+**Page Overview**
+- Department master setup for HR hierarchy and staff grouping.
+
 **What You Can Do Here**
-- Create and organize department structure.
-- Use the visible actions and filters on this page to complete tasks.
+- Add or edit department records.
+- Review total employees per department.
+- Search and sort departments for governance.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Map each employee to a single owning department.
+- Keep department names stable for reports.
+- Run cleanup on unused departments periodically.
 
 ---
 
@@ -543,30 +663,38 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Staff](screenshots/32-human-resources-staffs.png)
 
+**Page Overview**
+- Detailed staff directory with org, designation, and status controls.
+
 **What You Can Do Here**
-- Manage staff directory and HR status.
-- Use the visible actions and filters on this page to complete tasks.
+- Filter staff by department/designation/location.
+- Review status markers like active/terminated.
+- Use row actions for detailed staff operations.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use tabs (All/Active/Inactive) to segment reviews.
+- Verify designation before changing staff status.
+- Export when preparing HR monthly reports.
 
 ---
 
-## 32. Salary Templates
+## 32. Salary Component Templates
 **Route:** `/human-resources/salary-templates`
 
-![Salary Templates](screenshots/33-human-resources-salary-templates.png)
+![Salary Component Templates](screenshots/33-human-resources-salary-templates.png)
+
+**Page Overview**
+- Template catalog for earnings/deductions and component calculations.
 
 **What You Can Do Here**
-- Define salary template structures.
-- Use the visible actions and filters on this page to complete tasks.
+- Create salary component templates.
+- Define calculation method and default values.
+- Track template usage before edits or removals.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Validate percentages against payroll policy.
+- Separate earnings and deductions clearly.
+- Review usage count before deleting a component.
 
 ---
 
@@ -575,14 +703,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Salary Groups](screenshots/34-human-resources-salary-groups.png)
 
+**Page Overview**
+- Group-level compensation structures composed of salary templates.
+
 **What You Can Do Here**
-- Group templates into compensation packages.
-- Use the visible actions and filters on this page to complete tasks.
+- Create salary groups for positions/levels.
+- Attach component templates to each group.
+- Filter groups by status for maintenance.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use naming by level (Entry/Mid/Senior) for clarity.
+- Activate only finalized salary structures.
+- Audit template count before applying group to staff.
 
 ---
 
@@ -591,14 +723,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Agreements](screenshots/35-human-resources-agreements.png)
 
+**Page Overview**
+- Agreement template hub for HR documents and employee agreement records.
+
 **What You Can Do Here**
-- Create and manage employee agreements/templates.
-- Use the visible actions and filters on this page to complete tasks.
+- Create and manage agreement templates.
+- Switch between template and employee agreement tabs.
+- Search existing templates before creating new ones.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Version agreement templates when policy changes.
+- Use clear titles to avoid duplicate templates.
+- Keep legal-approved templates marked and traceable.
 
 ---
 
@@ -607,14 +743,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Locations](screenshots/36-locations.png)
 
+**Page Overview**
+- Work location registry used across attendance, assets, and HR records.
+
 **What You Can Do Here**
-- Configure work locations and related metadata.
-- Use the visible actions and filters on this page to complete tasks.
+- Add and edit location records.
+- Classify locations by type (office/vendor).
+- Search locations for mapping and cleanup.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use consistent location naming with city/site info.
+- Validate address completeness for office locations.
+- Retire obsolete sites to reduce operational noise.
 
 ---
 
@@ -623,14 +763,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Customer Payment](screenshots/37-customer-payment.png)
 
+**Page Overview**
+- Customer payment tracking page with payment status and receipt actions.
+
 **What You Can Do Here**
-- Track customer payment entries and related actions.
-- Use the visible actions and filters on this page to complete tasks.
+- Record new customer payments.
+- Filter by status, date, method, and recorder.
+- Review receipts and sync state per transaction.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use date filters during daily cash reconciliation.
+- Check sync status before closing accounting cycle.
+- Attach or verify receipt links for audit readiness.
 
 ---
 
@@ -639,14 +783,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Travel Ticket Management (Default)](screenshots/38-travel-ticket-management.png)
 
+**Page Overview**
+- Default travel module route; currently lands on personal travel request list.
+
 **What You Can Do Here**
-- Manage and review data for travel ticket management (default).
-- Use the visible actions and filters on this page to complete tasks.
+- Open travel request pipeline from module root.
+- Create a new travel request quickly.
+- Review current personal request status.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use status filter before raising follow-up requests.
+- Keep request purpose clear for faster approvals.
+- Expect this route to open the request-details screen.
 
 ---
 
@@ -655,14 +803,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Travel Request Details](screenshots/39-travel-ticket-management-travel-request-details.png)
 
+**Page Overview**
+- Detailed list of submitted personal travel requests and their statuses.
+
 **What You Can Do Here**
-- Review travel request submissions and details.
-- Use the visible actions and filters on this page to complete tasks.
+- Create new travel requests.
+- Track request history and current status.
+- Use table actions to manage request lifecycle.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Set status filter to locate pending requests.
+- Review requester/purpose columns before updates.
+- Use this page as your primary travel self-service view.
 
 ---
 
@@ -671,14 +823,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Approval Request Details](screenshots/40-travel-ticket-management-approvals-request-details.png)
 
+**Page Overview**
+- Manager/admin approval console for team travel requests by decision state.
+
 **What You Can Do Here**
-- Handle approval workflows for travel requests.
-- Use the visible actions and filters on this page to complete tasks.
+- Review pending travel approvals.
+- Track approved/rejected totals at the top cards.
+- Filter and process requests by status.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Prioritize pending queue during daily review.
+- Use status dropdown to focus on bottlenecks.
+- Validate trip purpose and dates before approval.
 
 ---
 
@@ -687,14 +843,18 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Notifications](screenshots/41-notifications.png)
 
+**Page Overview**
+- Central notification inbox grouped by all/unread/read tabs.
+
 **What You Can Do Here**
-- Check unread/read notification streams.
-- Use the visible actions and filters on this page to complete tasks.
+- View system and workflow alerts.
+- Switch between unread and read message groups.
+- Confirm no missed operational notifications.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Check unread tab first at day start.
+- Use notifications after major approvals/actions.
+- Clear old alerts regularly for signal quality.
 
 ---
 
@@ -703,13 +863,17 @@ Generated from live UI capture on **February 23, 2026** at **https://hrms.srj.gr
 
 ![Organizations](screenshots/42-organizations.png)
 
+**Page Overview**
+- Organization management console for multi-company setup and access scope.
+
 **What You Can Do Here**
-- Manage organization records and onboarding state.
-- Use the visible actions and filters on this page to complete tasks.
+- Create new organizations.
+- Review active/inactive org counts and cards.
+- Manage org-level settings from card actions.
 
 **Quick Tips**
-- Use top-level filters before running actions.
-- Use search fields to narrow records quickly.
-- If a widget is loading for long, refresh the page once.
+- Use status filter to monitor inactive organizations.
+- Verify timezone/currency when onboarding orgs.
+- Use search for quick org lookups in large lists.
 
 ---
