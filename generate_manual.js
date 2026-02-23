@@ -783,22 +783,6 @@ function buildHtml() {
         radial-gradient(1200px 600px at 90% -20%, #dbfff4 0%, transparent 55%),
         var(--bg);
     }
-    .hero {
-      padding: 42px 22px 24px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(120deg, rgba(47, 97, 233, 0.12), rgba(22, 162, 165, 0.1));
-    }
-    .hero h1 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 40px); }
-    .hero p { margin: 0; color: var(--muted); font-size: 15px; }
-    .chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip {
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: var(--muted);
-    }
     .wrap { display: grid; grid-template-columns: 300px 1fr; gap: 18px; padding: 18px; }
     .toc {
       position: sticky;
@@ -876,16 +860,6 @@ function buildHtml() {
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>HRMS First-Visitor Manual</h1>
-    <p>UI-visible guide generated from live navigation at <strong>https://hrms.srj.group</strong> on <strong>February 23, 2026</strong>.</p>
-    <div class="chips">
-      <span class="chip">Frontend-only manual</span>
-      <span class="chip">No backend dependency</span>
-      <span class="chip">No role/org branching in manual content</span>
-      <span class="chip">41 page sections</span>
-    </div>
-  </header>
   <main class="wrap">
     <aside class="toc">
       <h3>Screen Index</h3>
