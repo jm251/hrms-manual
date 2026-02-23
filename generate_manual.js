@@ -903,6 +903,7 @@ function writeOutputs() {
   assertScreenshotsExist();
   fs.writeFileSync(path.join(OUTPUT_DIR, 'HRMS_UI_Visible_User_Manual.md'), buildMarkdown());
   fs.writeFileSync(path.join(OUTPUT_DIR, 'HRMS_UI_Visible_User_Manual.html'), buildHtml());
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'index.html'), buildHtml());
 }
 
 writeOutputs();
